@@ -1,0 +1,17 @@
+@using PlacesYouBeen.Models;
+<h1>Welcome To Your Travel Tracker!</h1>
+@if (Model.Count == 0)
+{
+  <p>You haven't traveled anywhere yet!</p>
+}
+<ul>
+  @foreach (Place item in Model)
+  {
+    <li>@item.Location</li>
+    <li>@item.Stay</li>
+    <li>@item.Buddies</li>
+    <li>@item.Notes</li>
+  }
+</ul>
+<a href='/places/new'>Add a new place you've been!</a>
+<a href='/places'>See your list of places you've been!</a>
